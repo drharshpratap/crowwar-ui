@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary-bg: #0f1b26;
+  --color-secondary-bg: #152533;
+  --color-primary-accent: #8db4ff;
+  --color-secondary-accent: #4ea1ff;
+  --color-primary-text: #f4f7ff;
+  --color-secondary-text: #b5c4e2;
+  --color-border: #1a2b3c;
+  --color-metallic-sheen: #1b2f3f;
+  --color-aux-bg: #1f3854;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: radial-gradient(circle at 20% 30%, rgba(77, 143, 255, 0.25), transparent 35%),
+    radial-gradient(circle at 70% 0%, rgba(78, 161, 255, 0.15), transparent 45%),
+    linear-gradient(160deg, rgba(15, 27, 38, 0.95), rgba(23, 41, 61, 1));
+  color: var(--color-primary-text);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Orbitron', system-ui, sans-serif;
+  letter-spacing: 0.18em;
+}
+
+.brand-logo {
+  font-family: 'Nosifer', 'Orbitron', sans-serif;
+  letter-spacing: 0.4em;
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-3xl border border-border bg-gradient-to-br from-metallicSheen/90 to-auxBg/80 shadow-[0_35px_80px_rgba(0,0,0,0.6)];
+  }
+
+  .nexa-glow {
+    @apply bg-gradient-to-r from-primaryAccent to-secondaryAccent shadow-[0_0_25px_rgba(78,161,255,0.5)];
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center rounded-xl border border-primaryAccent bg-primaryAccent/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-primaryAccent transition hover:bg-primaryAccent/20;
+  }
+}
