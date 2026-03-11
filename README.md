@@ -1,1 +1,2 @@
 # crowwar-ui
+deploy app
