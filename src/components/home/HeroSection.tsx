@@ -15,7 +15,7 @@ export const HeroSection = ({ onExplore, onSell }: HeroSectionProps) => (
       muted
       loop
       playsInline
-      src="/src/assets/videos/1.mp4"
+    src="/videos/1.mp4"
       className="absolute inset-0 h-full w-full object-cover"
     />
     <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/70" />

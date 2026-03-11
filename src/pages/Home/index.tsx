@@ -7,8 +7,8 @@ import { SellCarCTA } from '../../components/home/SellCarCTA';
 import { VideoSection } from '../../components/home/VideoSection';
 import { sampleAuctions } from '../../mock/sampleData';
 
-const firstVideoSection = '/src/assets/videos/2.mp4';
-const secondVideoSection = '/src/assets/videos/3.mp4';
+const firstVideoSection = '/videos/2.mp4';
+const secondVideoSection = '/videos/3.mp4';
 
 export const HomePage = () => {
   const navigate = useNavigate();
