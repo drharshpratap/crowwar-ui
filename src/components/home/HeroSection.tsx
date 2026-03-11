@@ -1,5 +1,3 @@
-import { Button } from '@radix-ui/react-button';
-
 interface HeroSectionProps {
   onExplore: () => void;
   onSell: () => void;

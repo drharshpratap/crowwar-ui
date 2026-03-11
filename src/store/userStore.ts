@@ -3,7 +3,7 @@ import type { UserProfile } from '../types';
 
 interface UserState {
   profile: UserProfile | null;
-  setProfile: (profile: UserProfile) => void;
+  setProfile: (profile: UserProfile | null) => void;
 }
 
 export const useUserStore = create<UserState>((set) => ({
