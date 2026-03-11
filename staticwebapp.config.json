@@ -1,0 +1,12 @@
+{
+  "mimeTypes": [
+    {
+      "extension": ".js",
+      "contentType": "text/javascript"
+    },
+    {
+      "extension": ".mjs",
+      "contentType": "text/javascript"
+    }
+  ]
+}
