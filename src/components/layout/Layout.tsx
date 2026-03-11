@@ -71,14 +71,16 @@ export const Layout = () => {
             ))}
           </nav>
           <div className="relative flex items-center gap-3" ref={toggleRef}>
-            <button
-              type="button"
-              onClick={() => setMenuOpen((prev) => !prev)}
-              className="rounded-full border border-border p-0 transition hover:border-primaryAccent focus:outline-none focus:ring-2 focus:ring-primaryAccent"
-              aria-label="Toggle profile actions"
-            >
-              <UserAvatar />
-            </button>
+            <div className="h-10 w-10 rounded-full border border-border p-1 transition hover:border-primaryAccent focus-within:ring-2 focus-within:ring-primaryAccent">
+              <button
+                type="button"
+                onClick={() => setMenuOpen((prev) => !prev)}
+                className="flex h-full w-full items-center justify-center rounded-full"
+                aria-label="Toggle profile actions"
+              >
+                <UserAvatar />
+              </button>
+            </div>
             {menuOpen && profile && (
               <div className="absolute right-0 top-full z-10 mt-3 w-48 rounded-2xl border border-border bg-secondaryBg/95 p-4 text-sm text-primaryText shadow-[0_20px_40px_rgba(0,0,0,0.6)]">
                 <p className="text-[0.6rem] uppercase tracking-[0.3em] text-secondaryText">{profile.name}</p>
