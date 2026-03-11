@@ -11,6 +11,8 @@ on:
 
 jobs:
   build_and_deploy_job:
+    env:
+      SYSTEM_DEBUG: true
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
@@ -20,6 +22,16 @@ jobs:
           submodules: true
           lfs: false
           persist-credentials: false
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Run build
+        run: npm run build
+      - name: Run tests
+        run: npm test
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
