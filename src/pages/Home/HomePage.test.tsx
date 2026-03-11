@@ -3,15 +3,15 @@ import { MemoryRouter } from 'react-router-dom';
 import { HomePage } from './index';
 
 describe('HomePage', () => {
-  it('renders hero and trending sections', () => {
+  it('renders hero and promotional sections', () => {
     render(
       <MemoryRouter>
         <HomePage />
       </MemoryRouter>
     );
 
-    expect(screen.getByText(/Featured Auction/i)).toBeInTheDocument();
-    expect(screen.getByText(/Curated selections/i)).toBeInTheDocument();
+    expect(screen.getByText(/Find Your Next Legendary Muscle Car/i)).toBeInTheDocument();
+    expect(screen.getByText(/Pure American Muscle/i)).toBeInTheDocument();
   });
 
   it('displays search bar with placeholder', () => {
@@ -21,6 +21,6 @@ describe('HomePage', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByPlaceholderText('Search cars, auctions, sellers')).toBeInTheDocument();
+    expect(screen.getByText(/Sell Your Muscle Car/i)).toBeInTheDocument();
   });
 });

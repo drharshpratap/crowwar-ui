@@ -18,11 +18,13 @@ export const AuctionCard = ({ auction }: AuctionCardProps) => {
       transition={{ type: 'spring', stiffness: 180 }}
       className="glass-card flex flex-col gap-4"
     >
-      <div className="relative h-48 overflow-hidden rounded-2xl bg-[#0a0a0a]/60">
-        <img src={mainImage} alt={auction.title} className="h-full w-full object-cover" />
-        <div className="absolute top-4 left-4 rounded-full bg-primaryAccent/90 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white">
-          Live
+      <div className="relative overflow-hidden rounded-2xl bg-[#0a0a0a]/60">
+        <div className="w-full aspect-[4/3]">
+          <img src={mainImage} alt={auction.title} className="h-full w-full object-cover" />
         </div>
+      <div className="absolute top-4 left-4 rounded-full bg-primaryAccent/90 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white">
+        Live
+      </div>
       </div>
       <div className="flex items-center justify-between">
         <div>

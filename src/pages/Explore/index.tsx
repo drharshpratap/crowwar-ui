@@ -33,7 +33,7 @@ export const ExplorePage = () => {
         <div>
           <AuctionFilters makes={makes} models={models} onChange={(payload) => setFilters({ make: payload.make })} />
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filteredAuctions.map((auction) => (
             <AuctionCard key={auction.id} auction={auction} />
           ))}
