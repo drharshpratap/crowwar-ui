@@ -1,13 +1,7 @@
 {
   "routes": [],
-  "mimeTypes": [
-    {
-      "extension": ".js",
-      "contentType": "text/javascript"
-    },
-    {
-      "extension": ".mjs",
-      "contentType": "text/javascript"
-    }
-  ]
+  "mimeTypes": {
+    ".js": "text/javascript",
+    ".mjs": "text/javascript"
+  }
 }
